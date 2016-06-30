@@ -12,8 +12,12 @@ class JobsController < ApplicationController
 	end
 
 	def create
-		Job.create(job_params)
-		redirect_to jobs_path
+		@job = Job.new(job_params)
+		if(@job.save)
+			redirect_to jobs_path
+		else
+			render :action => 'edit'
+		end
 	end
 
 	def edit
