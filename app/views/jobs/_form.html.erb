@@ -25,6 +25,10 @@
 		<%= f.number_field :salary, in: 0..300000, step: 100 %>
 	</div>
 	<div>
+		<%= f.label :tag_list %>
+		<%= f.text_field :tag_list %>
+	</div>
+	<div>
 		<%= f.submit %>
 	</div>
 <% end %>

@@ -10,6 +10,12 @@
 			<b>Salary:</b>
 			<%= @job.salary %>
 		<% end %>
+		<p>
+			Tags:
+			<% @job.tags.each do |tag| %>
+				<%= link_to tag.name, tag_path(tag) %>
+			<% end %>
+		</p>
 	</div>
 	<div>
 	<h5><%= link_to "Edit posting", edit_job_path(@job) %></h5>
