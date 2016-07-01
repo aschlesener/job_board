@@ -1,7 +1,15 @@
 
 	<div>
+		<b>Title:</b>
 		<%= @job.title %>
+		<br>
+		<b>Description:</b>
 		<%= @job.description %>
+		<br>
+		<% if @job.salary %>
+			<b>Salary:</b>
+			<%= @job.salary %>
+		<% end %>
 	</div>
 	<div>
 	<h5><%= link_to "Edit posting", edit_job_path(@job) %></h5>

@@ -21,6 +21,10 @@
 		<%= f.text_area :description, size: '60x6' %>
 	</div>
 	<div>
+		<%= f.label :salary %>
+		<%= f.number_field :salary, in: 0..300000, step: 100 %>
+	</div>
+	<div>
 		<%= f.submit %>
 	</div>
 <% end %>

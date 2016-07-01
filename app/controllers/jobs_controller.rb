@@ -27,7 +27,7 @@ class JobsController < ApplicationController
 	def update
 		@job = Job.find(params[:id])
 		@job.update_attributes(job_params)
-		redirect_to jobs_path
+		redirect_to job_path(@job)
 	end
 
 	def destroy
@@ -39,6 +39,6 @@ class JobsController < ApplicationController
 	private
 
 	def job_params
-		params.require(:job).permit(:title, :description)
+		params.require(:job).permit(:title, :description, :salary)
 	end
 end
